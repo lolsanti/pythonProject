@@ -1,41 +1,42 @@
+def add(num1, num2):
+    return num1 + num2
 
+def subtract(num1, num2):
+    return num1 - num2
 
-def add(first_number, second_number):
-    return first_number + second_number
+def multiply(num1, num2):
+    return num1 * num2
 
-
-def subtract(first_number, second_number):
-    return first_number - second_number
-
-
-def multiply(first_number, second_number):
-    return first_number * second_number
-
-
-def divide(first_number, second_number):
-    if second_number == 0:
-        return "Can not divide on zero"
+def divide(num1, num2):
+    if num2 == 0:
+        return "Can't divide by zero"
     else:
-        return first_number / second_number
+        return num1 / num2
 
+print("Welcome to Calculator!")
 
-print("Welcome to calculator!")
+while True:
 
-first_number = float(input("Enter the first number: "))
-second_number = float(input("Enter the second second: ")) # Переменые можно было сделать покороче
-operation = input("Enter the operation (+, -, *, /)")
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+    operation = input("Enter an operation (+, -, *, /): ")
 
+    if operation == "+":
+        result = add(num1, num2)
+    elif operation == "-":
+        result = subtract(num1, num2)
+    elif operation == "*":
+        result = multiply(num1, num2)
+    elif operation == "/":
+        result = divide(num1, num2)
+    else:
+        print("Incorrect operation")
+        continue
 
-if operation == '+':
-    result = add(first_number, second_number)
-elif operation == '-':
-    result = subtract(first_number, second_number)
-elif operation == '*':
-    result = multiply(first_number, second_number)
-elif operation == '/':
-    result = divide(first_number,second_number)
-else:
-    print("Invalid operation")
+    print(f"result: {result}")
 
+    again = input("Do you want to continue? (yes/no): ")
+    if again.lower() != "yes":
+        break
 
-print(f"result': {result}")
+print("Thank you for using the calculator!")
