@@ -20,14 +20,22 @@ def divide(first_number, second_number):
 
 
 print("Welcome to calculator!")
+
 first_number = float(input("Enter the first number: "))
-second_number = float(input("Enter the second second: "))
+second_number = float(input("Enter the second second: ")) # Переменые можно было сделать покороче
 operation = input("Enter the operation (+, -, *, /)")
-# Переменые можно было сделать покороче
-
-print(add(first_number, second_number))
-print(subtract(first_number, second_number))
-print(multiply(first_number, second_number))
-print(divide(first_number, second_number))
 
 
+if operation == '+':
+    result = add(first_number, second_number)
+elif operation == '-':
+    result = subtract(first_number, second_number)
+elif operation == '*':
+    result = multiply(first_number, second_number)
+elif operation == '/':
+    result = divide(first_number,second_number)
+else:
+    print("Invalid operation")
+
+
+print(f"result': {result}")
