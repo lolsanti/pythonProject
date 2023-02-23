@@ -1,24 +1,34 @@
-def add(num1, num2):
-    return num1 + num2
+def add(num_1, num_2):
+    return num_1 + num_2
 
-def subtract(num1, num2):
-    return num1 - num2
 
-def multiply(num1, num2):
-    return num1 * num2
+def subtract(num_1, num_2):
+    return num_1 - num_2
 
-def divide(num1, num2):
-    if num2 == 0:
+
+def multiply(num_1, num_2):
+    return num_1 * num_2
+
+
+def divide(num_1, num_2):
+    if num_2 == 0:
         return "Can't divide by zero"
     else:
-        return num1 / num2
+        return num_1 / num_2
+
 
 print("Welcome to Calculator!")
-
 while True:
+    try:
+        num1 = float(input("Enter the first number: "))
+    except:
+        num1 = float(input("It's should be a number: "))
 
-    num1 = float(input("Enter the first number: "))
-    num2 = float(input("Enter the second number: "))
+    try:
+        num2 = float(input("Enter the second number: "))
+    except:
+        num2 = float(input("It's should be a number: "))
+
     operation = input("Enter an operation (+, -, *, /): ")
 
     if operation == "+":
