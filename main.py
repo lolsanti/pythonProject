@@ -40,7 +40,7 @@ while True:
     elif operation == "/":
         result = divide(num1, num2)
     else:
-        print("Incorrect operation")
+        print("Incorrect operation!")
         continue
 
     print(f"result: {result}")
